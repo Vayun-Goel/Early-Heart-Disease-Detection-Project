@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeDoc</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/757556395f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles/styles.css')}}">
+</head>
+<body>
+  <div class="navbar">
+    <div class="icon_heart">
+      <i class="fa-solid fa-heart-pulse fa-2xl"></i>
+      <button class="homebutton" id="homebutton" style="color: blue;background-color: aliceblue; border: none;">home</button>
+    </div>
+    <div class="loginpanel">
+      <a href="#">login</a> / <a href="#">register</a>
+    </div>   
+  </div>
+  <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="{{url_for('static',filename='images/My project.jpg')}}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{{url_for('static',filename='images/My project copy.jpg')}}" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="{{url_for('static',filename='images/My project copy 2.jpg')}}" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <div class="text_below_slider" style="padding-top: 10px;">
+    <h2>We believe in early detection! prevention is better than cure</h2>
+  </div>
+  <div class="div_card_mine_heart">
+    <div class="inner_card_1_mine">
+      <div class="inner_card_ele">
+        <img src="{{url_for('static',filename='images/heart_pic.jpg')}}" class="heart_disease_pic" style="border-radius: 19px;">
+        <h4 style="color: aliceblue; text-align: center; padding-top: 10px;">coronary heart disease detection</h4>
+        <h4><button id="vayunbutton1" style="text-decoration: none; background-color:white;">diagnose now!</button></h4>
+      </div>
+    </div>
+    <div class="heart_text_card">
+      <h3><pre class="some_text" style="color: aliceblue;">
+      Cardiovascular diseases (CVDs) are
+      the leading cause of death globally, 
+      taking an estimated 17.9 million lives
+      each year.CVDs are a group of disorders
+      of the heart and blood vessels and
+      include coronary heart disease, 
+      cerebrovascular disease,rheumatic heart 
+      disease and other conditions. More than 
+      four out of five CVD deaths are due the 
+      heart attacks and strokes, and one 
+      third of these deaths,occur prematurely
+      in people under 70 years of age.
+                                      - WHO
+      </pre></h3>
+    </div>
+  </div>
+  <div class="form_for_heart">
+    <h3 style="text-align: center; color: aliceblue;">Kindly Fill Your Details</h3>
+    <form class="form" action="/predict" method="post">
+      <label for="Exercise" style="align-items: center;">Exercise: 1(Yes) 0(No)</label> <br/>  
+      <input type="number" id="Exercise" name="Exercise" required/> <br/>  
+      <label for="Skin_Cancer">Skin Cancer: 1(Yes) 0(No)</label><br/>
+      <input type="number" id="Skin_Cancer" name="Skin_Cancer" required/> <br/> 
+      <label for="Other_Cancer">Other Cancer: 1(Yes) 0(No)</label><br/>
+      <input type="number" id="Other_Cancer" name="Other_Cancer" required/> <br/>
+      <label for="Depression">Depression: 1(Yes) 0(No)</label><br/>
+      <input type="number" id="Depression" name="Depression" required/> <br/> 
+      <label for="Diabetes">Diabetes: 1(Yes) 0(No)</label><br/>
+      <input type="number" id="Diabetes" name="Diabetes" required/> <br/> 
+      <label for="Arthritis">Arthritis: 1(Yes) 0(No)</label><br/>
+      <input type="number" id="Arthritis" name="Arthritis" required/> <br/> 
+      <label for="Sex">Sex: 1(Male) 0(Female)</label><br/>
+      <input type="number" id="Sex" name="Sex" required/> <br/> 
+      <label for="Smoking_History">Smoking History: 1(Yes) 0(No)</label><br/>
+      <input type="number" id="Smoking_History" name="Smoking_History" required/> <br/> 
+      <label for="General_Health">General Health: 4(Very Good) 3(Poor) 2(Good) 1(Fair) 0(Excellent)</label><br/>
+      <input type="number" id="General_Health" name="General_Health" required/> <br/> 
+      <label for="Checkup">Checkup: 4(Within the past year) 3(Within the past 5 years) 2(Within the past 2 years) 1(Never) 0(5 or more years ago)</label><br/>
+      <input type="number" id="Checkup" name="Checkup" required/> <br/> 
+      <label for="Age_Category">Age:</label><br/>
+      <input type="number" id="Age_Category" name="Age_Category" required/> <br/> 
+      <label for="BMI">BMI:</label><br/>
+      <input type="number" id="BMI" name="BMI" step="0.1" required/> <br/> 
+      <label for="Alcohol_Consumption">Alcohol Consumption:</label><br/>
+      <input type="number" id="Alcohol_Consumption" name="Alcohol_Consumption" step="0.1" required/> <br/> 
+      <label for="Fruit_Consumption">Fruit Consumption:</label><br/>
+      <input type="number" id="Fruit_Consumption" name="Fruit_Consumption" step="0.1" required/> <br/> 
+      <label for="Green_Vegetables_Consumption">Green Vegetables Consumption:</label><br/>
+      <input type="number" id="Green_Vegetables_Consumption" name="Green_Vegetables_Consumption" step="0.1" required/> <br/> 
+    </br><input type="submit" value="Register" style="margin-left: 45%;"> <br/>
+    </form>
+  </div>
+  <div class="final_footer" style="padding-top: 50px;">
+    <h4>Happy Diagnosing!</h4>
+  </div>
+  <script src="{{url_for('static',filename='index.js')}}"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

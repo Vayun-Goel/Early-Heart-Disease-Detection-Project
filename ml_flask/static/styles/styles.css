@@ -1,0 +1,126 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #151f30;
+}
+
+.loginpanel{
+    float: right;
+    padding-right: 5px;
+}
+
+.navbar{
+    background-color: aliceblue;
+    height: 40px;
+    width: 100%;
+}
+
+.loginpanel a:link{
+    text-decoration: none;
+}
+
+.icon_heart{
+    float: left;
+    padding-left: 5px;
+}
+
+#carouselExampleAutoplaying{
+    display:block;
+}
+
+.heart_disease_pic{
+    height: 450px;
+    width: 650px;
+}
+
+.final_pic{
+    height: 600px;
+    width: 70%;
+    padding-left: 15%;
+}
+
+.text_below_slider{
+    display: block;
+    color: aliceblue;
+    align-items: center;
+    text-align: center;
+}
+
+.home_button{
+    float:left;
+}
+
+.inner_card_1_mine{
+    float:left;
+    border-radius: 19px;
+    padding: 10px;
+    width: 47%;
+    background-color: rgb(18, 50, 84);
+}
+
+.heart_text_card{
+    float:left;
+    height:550px;
+    width:53%;
+    padding-top: 75px;
+    padding-left:35px;
+}
+
+.inner_card_2_mine{
+    float:right;
+    border-radius: 19px;
+    padding: 10px;
+    width: 47%;
+    background-color: rgb(18, 50, 84);
+}
+
+.inner_card_ele{
+    text-align: center;
+}
+
+.div_card_mine_heart{
+    display:block;
+    padding:15px;
+}
+
+.div_card_mine_liver{
+    display:block;
+    padding:15px;
+}
+
+.liver_text_card{
+    float:left;
+    height:550px;
+    width:53%;
+    padding-top: 95px;
+}
+
+.final_footer{
+    text-align: center;
+    color: white;
+}
+
+.form_for_heart{
+    display: none;
+    width: 60%;
+    margin-left:20%;
+    background: rgb(7, 17, 28);
+    color: aliceblue;
+}
+
+input[type=text]{
+    width: 97%;
+    margin-left: 10px;
+    box-sizing:border-box;
+    border-radius: 5px;
+}
+
+input[type=number]{
+    width: 97%;
+    margin-left: 10px;
+    box-sizing:border-box;
+    border-radius: 5px;
+}
